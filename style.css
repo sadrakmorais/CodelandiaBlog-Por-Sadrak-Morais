@@ -143,3 +143,15 @@ body {
     padding: 15px;
   }
 }
+@media (max-width: 900px) {
+  .header {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  .posts {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  .iconPesquisa {
+    width: 60px;
+    padding: 15px;
+  }
+}
