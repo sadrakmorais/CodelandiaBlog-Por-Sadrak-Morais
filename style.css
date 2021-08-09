@@ -1,0 +1,145 @@
+:root {
+  --blue: #3ea1db;
+  --blue-dark: #574ae8;
+  --white: #fff;
+
+  --title: #313131;
+  --text: #b6b6b6;
+
+  --linear: linear-gradient(90deg, #574ae8 0%, #3ea1db 100%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  list-style: none;
+}
+.header {
+  display: grid;
+  background: var(--linear);
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas:
+    ". logo ."
+    ".pesquisa .";
+}
+.header .logo {
+  grid-area: logo;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.logo h1 {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+}
+.header .pesquisa {
+  grid-area: pesquisa;
+  display: grid;
+  grid-template-columns: 1fr 15fr;
+  grid-template-rows: 50px;
+  margin: 30px 0;
+}
+.iconPesquisa {
+  display: flex;
+  background: rgb(255, 255, 255, 0.2);
+  justify-content: center;
+  border-radius: 3px 0 0 3px;
+  padding: 15px;
+}
+.iconPesquisa svg {
+  width: 20px;
+}
+
+#search {
+  stroke: #fff;
+  fill: #fff;
+}
+.pesquisa input {
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 0 3px 3px 0;
+  border: none;
+  outline: none;
+  font-size: 15px;
+  color: var(--white);
+  padding-left: 10px;
+}
+::-webkit-input-placeholder {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+}
+.data svg path {
+  stroke: var(--blue);
+  fill: none;
+}
+/*Noticias*/
+.posts {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: ". posts .";
+}
+.containerPosts {
+  grid-area: posts;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.containerPosts .data {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.data svg {
+  width: 20px;
+}
+.data p {
+  font-size: 13px;
+  color: var(--text);
+}
+.data button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+#like:hover {
+  fill: red;
+  stroke: red;
+}
+.post h1 {
+  color: var(--title);
+}
+.post p {
+  margin: 5px 0;
+  color: var(--text);
+}
+.post {
+  box-shadow: 0px 0px 10px rgba(19, 19, 31, 0.2);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 20px 0;
+}
+body {
+  background: #f3f5f7;
+}
+/*Medias Queries*/
+
+@media (max-width: 450px) {
+  .header {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  .posts {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  .iconPesquisa {
+    width: 40px;
+    padding: 10px;
+  }
+}
+@media (max-width: 1300px) {
+  .iconPesquisa {
+    width: 60px;
+    padding: 15px;
+  }
+}
