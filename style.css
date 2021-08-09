@@ -86,19 +86,19 @@
   display: flex;
   flex-direction: column;
 }
-.containerPosts .date {
+.containerPosts .data {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.date svg {
+.data svg {
   width: 20px;
 }
-.date p {
+.data p {
   font-size: 13px;
   color: var(--text);
 }
-.date button {
+.data button {
   background: none;
   border: none;
   cursor: pointer;
@@ -138,6 +138,12 @@ body {
   }
 }
 @media (max-width: 1300px) {
+  .header {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
+  .posts {
+    grid-template-columns: 1fr 10fr 1fr;
+  }
   .iconPesquisa {
     width: 60px;
     padding: 15px;
